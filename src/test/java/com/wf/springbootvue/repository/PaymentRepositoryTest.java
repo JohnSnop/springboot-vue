@@ -1,10 +1,9 @@
 package com.wf.springbootvue.repository;
 
+import com.wf.springbootvue.domain.Payment;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author wf
@@ -19,5 +18,12 @@ class PaymentRepositoryTest {
     @Test
     void findAll() {
         System.out.println(paymentRepository.findAll());
+    }
+
+    @Test
+    void save() {
+        Payment payment = new Payment();
+        payment.setSerial("Springboot+vue");
+        paymentRepository.save(payment);
     }
 }
