@@ -26,4 +26,9 @@ class PaymentRepositoryTest {
         payment.setSerial("Springboot+vue");
         paymentRepository.save(payment);
     }
+
+    @Test
+    void findById() {
+        System.out.println(paymentRepository.findById(20L).get());
+    }
 }

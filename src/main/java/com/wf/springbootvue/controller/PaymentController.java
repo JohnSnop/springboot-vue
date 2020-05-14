@@ -6,6 +6,7 @@ import com.wf.springbootvue.repository.PaymentRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -38,5 +39,23 @@ public class PaymentController {
     public CommonResult<Payment> save(@RequestBody Payment payment) {
         Payment save = paymentRepository.save(payment);
         return new CommonResult<>(200, "添加成功", save);
+    }
+
+    @GetMapping("/payment/findById/{id}")
+    public CommonResult<Payment> findById(@PathVariable Long id) {
+        return new CommonResult<>(200,"查询成功", paymentRepository.findById(id).get());
+    }
+
+    @DeleteMapping("/payment/deleteById/{id}")
+    @Transactional
+    public CommonResult<Payment> deleteById(@PathVariable Long id) {
+        paymentRepository.deleteById(id);
+        return new CommonResult<>(200,"删除成功");
+    }
+
+    @PutMapping("/payment/update")
+    public CommonResult<Payment> update(@RequestBody Payment payment) {
+        Payment save = paymentRepository.save(payment);
+        return new CommonResult<>(200, "修改成功", save);
     }
 }
