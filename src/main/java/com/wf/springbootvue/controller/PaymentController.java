@@ -22,13 +22,13 @@ public class PaymentController {
     @Resource
     private PaymentRepository paymentRepository;
 
-    @RequestMapping("/payment/findAll")
+    @GetMapping("/payment/findAll")
     public CommonResult<List<Payment>> findAll() {
         List<Payment> paymentList = paymentRepository.findAll();
         return new CommonResult<>(200, "查询成功", paymentList);
     }
 
-    @RequestMapping("/payment/findByPage/{page}/{size}")
+    @GetMapping("/payment/findByPage/{page}/{size}")
     public CommonResult<Page<Payment>> findByPage(@PathVariable Integer page, @PathVariable Integer size) {
         Pageable pageable = PageRequest.of(page - 1, size);
         Page<Payment> paymentList = paymentRepository.findAll(pageable);

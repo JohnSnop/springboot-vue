@@ -10,8 +10,8 @@ import java.util.Optional;
  * @create 2020-05-10 21:16
  * @desc
  **/
-public interface PaymentRepository extends JpaRepository<Payment, Integer> {
-    Optional<Payment> findById(Long id);
+public interface PaymentRepository extends JpaRepository<Payment, Long> {
+    // Optional<Payment> findById(Long id);
 
-    void deleteById(Long id);
+    // void deleteById(Long id);
 }
