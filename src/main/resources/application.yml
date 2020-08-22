@@ -20,3 +20,8 @@ jasypt:
     property:
       prefix: WF##(
       suffix: )
+
+wf:
+  hello:
+    prefix: Hello
+    suffix: Master
