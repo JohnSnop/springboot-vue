@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.wf.springbootvue.listener.HelloApplicationContextInitializer
+
+org.springframework.boot.SpringApplicationRunListener=\
+com.wf.springbootvue.listener.HelloSpringApplicationRunListener
