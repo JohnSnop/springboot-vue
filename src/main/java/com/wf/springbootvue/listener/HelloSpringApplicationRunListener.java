@@ -12,7 +12,9 @@ import org.springframework.core.env.ConfigurableEnvironment;
  **/
 public class HelloSpringApplicationRunListener implements SpringApplicationRunListener {
 
+    // 需要提供构造器
     public HelloSpringApplicationRunListener(SpringApplication application, String[] args) {
 
     }
+
 }
