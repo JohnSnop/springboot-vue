@@ -7,7 +7,7 @@ spring:
     &serverTimezone=GMT%2B8"
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: WF##(d/SPhNN73xkJ19EjX/EeReDCehLJkbkx0RxLfCWBhrHUaFMWNxNPD7LdyCqzg2Fq)
+    password: WF##(5B9rK5OVZhNGs0fsZiJv8/dfzGHLH4FQpOEg2flAKn+BYcOHdDWyx1qi+dK9L/di)
   jpa:
     show-sql: true
     properties:
